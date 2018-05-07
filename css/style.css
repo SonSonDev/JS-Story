@@ -1,0 +1,54 @@
+body {
+    height: 100vh;
+    width: 100vw;
+}
+.game {
+    font-size: 24px;
+    border: 1px solid black;
+    width: 1280px;
+    height: 720px;
+    margin: 20px auto;
+    display: flex;
+    position: relative;
+}
+
+.messageBox {
+    position: absolute;
+    bottom: 10px;
+    width: 90%;
+    height: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 30px;
+}
+.messageBox p {
+    margin-bottom: 10px;
+}
+
+.choiceSection {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translateX(-50%) translateY(-70%);
+}
+
+.choiceSection button {
+    font-size: 30px;
+    margin-bottom: 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    transition: all 0.2s linear;
+
+}
+
+.choiceSection button:hover {
+    background-color: black;
+    color:white;
+}
