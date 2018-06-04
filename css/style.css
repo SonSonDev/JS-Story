@@ -1,43 +1,63 @@
-body {
-    height: 100vh;
-    width: 100vw;
+@font-face {
+    src: url("../fonts/Roboto-Regular.ttf");
+    font-family: "Roboto";
 }
+
+body {
+
+    user-select: none;
+    background: rgb(0, 0, 0);
+
+}
+
 .game {
-    font-size: 24px;
-    border: 1px solid black;
-    width: 1280px;
-    height: 720px;
-    margin: 20px auto;
+    margin: auto;
+    height: 576px;
+    width: 1024px;
+    margin: 30px auto;
+    background: rgb(241, 241, 241);
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
-.messageBox {
+.gameImg {
     position: absolute;
-    bottom: 10px;
-    width: 90%;
-    height: 30%;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.messageBox {
+    background: rgb(255, 255, 255);
+    width: 800px;
+    height: 200px;
+    margin: auto;
     border: 1px solid black;
     border-radius: 5px;
     box-sizing: border-box;
-    padding: 30px;
+    padding: 40px 100px;
 }
+
 .messageBox p {
+    font-family: "Roboto";
     margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 .choiceSection {
     display: flex;
     flex-direction: column;
     position: absolute;
-    left:50%;
-    top:50%;
-    transform: translateX(-50%) translateY(-70%);
+    z-index: 3;
+
 }
 
 .choiceSection button {
+    font-family: "Roboto";
     font-size: 30px;
     margin-bottom: 20px;
     background-color: white;
@@ -45,10 +65,9 @@ body {
     border-radius: 5px;
     padding: 20px;
     transition: all 0.2s linear;
-
 }
 
 .choiceSection button:hover {
     background-color: black;
-    color:white;
+    color: white;
 }

@@ -1,0 +1,153 @@
+{
+    "Intro": {
+        "step": [{
+                "message": "Il était une fois, un tanuki qui s'appelle Qiqi qui vivait dans la forêt. Il était seul...",
+                "picture":"intro1.jpg"
+            },
+            {
+                "message": "Il n'avait ni maison, ni famille. Il l'avait perdu si jeune qu'il ne s'en souvenait pas."
+            },
+            {
+                "message": "Il décida de trouver un lieu pour s'installer et essayer de devenir ami avec ses voisins.",
+                "picture":"intro2.jpg"
+            },
+            {
+                "message": "Cependant, ses nouveaux voisins n'était pas très contents."
+            },
+            {
+                "message": " Ils ne le connaissaient pas et se demandaient pourquoi il était venu s'installer ici si soudainement.",
+                "picture":"intro3.jpg"
+            },
+            {
+                "message": "Qiqi le tanuki n'arrivait pas à s'intégrer..."
+            },
+            {
+                "message": "Puis, un jour, les animaux eurent une mauvaise surprise."
+            },
+            {
+                "message": "Une meute de loups était venue pour les manger.",
+                "picture":"intro4.jpg"
+            },
+            {
+                "message": "C'était la panique, les animaux tentaient de fuir et Qiqi le tanuki, à l'abri, voulait les aider, mais ne savait pas quoi faire."
+            },
+            {
+                "message": "Qiqi le tanuki avait en revanche un pouvoir très spécial. Il pouvait se changer en ce qu'il souhaitait."
+            },
+            {
+                "message": "En quoi Qiqi le tanuki décide-t-il de se changer ?"
+            }
+        ],
+        "choice": [{
+                "answer": "En loup",
+                "route": "A"
+            },
+            {
+                "answer": "En oiseau",
+                "route": "F1"
+            },
+            {
+                "answer": "Il ne se transforme pas",
+                "route": "B"
+            }
+        ]
+    },
+    "A": {
+        "step": [{
+                "message": "Qiqi le tanuki décida de se transformer en loup."
+            },
+            {
+                "message": "Il s'attaqua alors aux méchants loups qui ne ccomprenaient pas ce qu'il se passait."
+            },
+            {
+                "message": "Les loups, stupéfaits d'être attaqués par l'un des leurs pendant leur chasse, décidèrent de battre en retraite."
+            },
+            {
+                "message": "Qiqi le tanuki était ainsi parvenu à sauver plusieurs de ses voisins."
+            },
+            {
+                "message": "Mais ce qu'ils avaient retenus, c'était surtout qu'il avait pris l'apparence d'un loup."
+            },
+            {
+                "message": "Ils décidèrent de chasser Qiqi le tanuki."
+            },
+            {
+                "message": "Qiqi le tanuki ne savait pas où aller. Il avança dans la forêt à la recherche d'un nouvel abri"
+            }
+        ],
+        "choice": [{
+                "answer": "",
+                "route": ""
+            },
+            {
+                "answer": "",
+                "route": ""
+            }
+        ]
+    },
+    "B": {
+        "step": [{
+                "message": ""
+            },
+            {
+                "message": ""
+            }
+        ],
+        "choice": [{
+                "answer": "",
+                "route": ""
+            },
+            {
+                "answer": "",
+                "route": ""
+            }
+        ]
+    }
+    ,"F1": {
+        "step": [{
+                "message": "Le tanuki se changea en oiseau. Il voulait aider les autres animaux."
+            },
+            {
+                "message": "Il voulait attirer l'attention des loups. Malheureusement, le tanuki n'avait jamais voler auparavant."
+            },
+            {
+                "message": "Il s'écrasa sur le sol et ne pouvait plus bouger."
+            },
+            {
+                "message": "Un loup en profita pour le manger."
+            },
+            {
+                "message": "Grâce à son acte, certains animaux ont réussi à s'enfuir et à survivre, mais ils ne pourront jamais lui dire merci."
+            },
+            {
+                "message": "Fin."
+            }
+        ],
+        "choice": [{
+                "answer": "Recommencer?",
+                "route": "Intro"
+            }
+        ]
+    },
+    "": {
+        "step": [{
+                "message": ""
+            },
+            {
+                "message": ""
+            },
+            {
+                "message": ""
+            }
+        ],
+        "choice": [{
+                "answer": "",
+                "route": ""
+            },
+            {
+                "answer": "",
+                "route": ""
+            }
+        ]
+    }
+}

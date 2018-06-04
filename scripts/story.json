@@ -1,63 +1,193 @@
 {
     "Intro": {
-        "message": ["Il était une fois, un loup.", "Il rencontra un berger et son mouton.", "Que fait le loup?"],
-        "choice": [
-            "Il mange le berger", "Il mange le mouton"
+        "step": [{
+                "message": "Il était une fois, un loup qui avait faim. Il ne voulait pas manger du lapin, il voulait quelque chose de nouveau. Il décida alors de sortir de la forêt."
+            },
+            {
+                "message": "Il rencontra un berger et son mouton."
+            },
+            {
+                "message": "Que fait le loup?"
+            }
         ],
-        "route": ["A", "B"]
+        "choice": [{
+                "answer": "Il attaque le berger",
+                "route": "A"
+            },
+            {
+                "answer": "Il attaque le mouton",
+                "route": "B"
+            },
+            {
+                "answer": "Il mange son pied",
+                "route": "C"
+            }
+        ]
     },
     "A": {
-        "message": ["Le loup mangea le berger.", "Les moutons pourchassèrent le loup.", "Où va-t-il?"],
-        "choice": ["Dans la forêt", "Dans le village", "Dans la montagne"],
-        "route": ["A1", "A2", "A3"]
+        "step": [{
+                "message": "Le loup mangea le berger."
+            },
+            {
+                "message": "Les moutons pourchassèrent le loup."
+            },
+            {
+                "message": "Où va-t-il?"
+            }
+        ],
+        "choice": [{
+                "answer": "Dans la forêt",
+                "route": "A1"
+            },
+            {
+                "answer": "Dans le village",
+                "route": "A2"
+            },
+            {
+                "answer": "Dans la montagne",
+                "route": "A3"
+            }
+        ]
     },
-
     "B": {
-        "message": ["Le loup se jeta sur le mouton.", "Le berger s'enfuit pour appeler de l'aide.", "Que fait le loup?"],
-        "choice": ["Il rentre chez lui", "Il pourchasse le berger"],
-        "route": ["B1", "B2"]
+        "step": [{
+                "message": "Le loup se jeta sur le mouton, il le mordit à la gorge et le fit saigner à mort. Avant de se régaler, il regarda le berger."
+            },
+            {
+                "message": "Le berger s'enfuit. Certainement pour sauver sa vie, mais sans doute aussi pour appeler de l'aide."
+            },
+            {
+                "message": "Que fait le loup?"
+            }
+        ],
+        "choice": [{
+                "answer": "Il mange le mouton",
+                "route": "B1"
+            },
+            {
+                "answer": "Il pourchasse le berger",
+                "route": "B2"
+            }
+        ]
     },
 
     "B1": {
-        "message": ["Les villageois partirent à la chasse au loup.", "Il est mort.", "Fin."],
-        "choice": ["Recommencer?"],
-        "route": ["Intro"]
+        "step": [{
+                "message": "Après s'être régalé de la chair du mouton, des habitants du plus proche village arrivèrent pour tuer le loup."
+            },
+            {
+                "message": "Le loup était encerclé. Il est mort"
+            },
+            {
+                "message": "Fin."
+            }
+        ],
+        "choice": [{
+            "answer": "Recommencer?",
+            "route": "Intro"
+        }]
     },
 
     "B2": {
-        "message": ["Le loup mangea le berger.", "Fin."],
-        "choice": ["Recommencer?"],
-        "route": ["Intro"]
+        "step": [{
+                "message": "Le loup mangea le berger."
+            },
+            {
+                "message": "Fin."
+            }
+        ],
+        "choice": [{
+            "answer": "Recommencer?",
+            "route": "Intro"
+        }]
     },
 
     "A1": {
-        "message": ["Le loup pu se cacher dans la forêt.", "Fin."],
-        "choice": ["Recommencer?"],
-        "route": ["Intro"]
+        "step": [{
+                "message": "Le loup pu se cacher dans la forêt."
+            },
+            {
+                "message": "Fin."
+            }
+        ],
+        "choice": [{
+            "answer": "Recommencer?",
+            "route": "Intro"
+        }]
     },
 
     "A2": {
-        "message": ["Le loup arrive devant une maison.", "Que fait-il?"],
-        "choice": ["Il se cache dedans", "Il se retourne vers les moutons et se bat jusqu'à la mort"],
-        "route": ["A2-1", "A2-2"]
+        "step": [{
+                "message": "Le loup arrive devant une maison."
+            },
+            {
+                "message": "Que fait-il?"
+            }
+        ],
+        "choice": [{
+                "answer": "Il se cache dedans",
+                "route": "A2-1"
+            },
+            {
+                "answer": "Il se retourne vers les moutons et se bat jusqu'à la mort",
+                "route": "A2-2"
+            }
+        ]
     },
     "A2-1": {
-        "message" : ["Les moutons rentrent dans la maison et le mangent.", "Fin."],
-        "choice": ["Recommencer?"],
-        "route": ["Intro"]
+        "step": [{
+                "message": "Les moutons rentrent dans la maison et le mangent."
+            },
+            {
+                "message": "Fin."
+            }
+        ],
+        "choice": [{
+            "answer": "Recommencer?",
+            "route": "Intro"
+        }]
     },
     "A2-2": {
-            "message" : ["Le loup trouve en lui une force cachée et se déchaine.", "Il mangea les moutons.", "Fin."],
-            "choice": ["Recommencer?"],
-            "route": ["Intro"]
+        "step": [{
+                "message": "Le loup trouve en lui une force cachée et se déchaine."
+            },
+            {
+                "message": "Il mangea les moutons."
+            },
+            {
+                "message": "Fin."
+            }
+        ],
+        "choice": [{
+            "answer": "Recommencer?",
+            "route": "Intro"
+        }]
     },
 
     "A3": {
-        "message": [
-            "Les moutons coincèrent le loup dans une grotte et le mangèrent.",
-            "Fin."
+        "step": [{
+                "message": "Les moutons coincèrent le loup dans une grotte et le mangèrent."
+            },
+            {
+                "message": "Fin."
+            }
         ],
-        "choice": ["Recommencer?"],
-        "route": ["Intro"]
+        "choice": [{
+            "answer": "Recommencer?",
+            "route": "Intro"
+        }]
+    },
+    "C": {
+        "step": [{
+                "message": "Haha"
+            },
+            {
+                "message": "Fin."
+            }
+        ],
+        "choice": [{
+            "answer": "Recommencer?",
+            "route": "Intro"
+        }]
     }
 }

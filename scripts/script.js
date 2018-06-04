@@ -1,60 +1,94 @@
+var imgFolder = "./img/"
 var data;
 
 function ajaxRequest() {
     var request = new XMLHttpRequest();
-    request.open("POST", "scripts/story.json", true);
+    request.open("POST", "scripts/story2.json", true);
     request.onreadystatechange = function() {
         if (request.readyState != 4 || request.status != 200) return;
-
         data = JSON.parse(request.responseText);
-
     };
+    console.log(request.readyState);
     request.send();
+};
+
+function aaaaaajax(){
+    fetch("./scripts/story2.json")
+    .then(function(res){
+        return res.json()
+    }).then(function(res){
+        data = res
+    })
+
 }
 
-function consoleData(data) {
-    console.log(data);
-}
+aaaaaajax();
 
 var ui = {
-    ajaxRqBtn: document.querySelector(".ajaxRqBtn"),
-    sayDataBtn: document.querySelector(".sayDataBtn"),
-    startBtn:document.querySelector(".startBtn")
-}
+    startBtn: document.querySelector(".startBtn")
+};
 
-
-ui.ajaxRqBtn.addEventListener('click', ajaxRequest);
-
-ui.sayDataBtn.addEventListener('click', function() {
-    consoleData(data)
-});
-
-var storyUI = {
+var storyUi = {
+    picture: document.querySelector(".gameImg"),
     message: document.querySelector(".messageBox"),
-    choiceSection : document.querySelector(".choiceSection")
+    choiceSection: document.querySelector(".choiceSection")
+};
+
+var progression = {
+    route: "Intro",
+    step: 0
+};
+
+function next() {
+    if (progression.step >= data[progression.route].step.length - 1) {
+        return;
+    }
+    progression.step++;
+    storyUi.message.innerHTML = "";
+    storyUi.choiceSection.innerHTML = "";
+    var newP = document.createElement('p');
+    newP.textContent = data[progression.route].step[progression.step].message;
+    storyUi.message.appendChild(newP);
+    if(data[progression.route].step[progression.step].picture){
+        storyUi.picture.src= imgFolder + data[progression.route].step[progression.step].picture;
+    }
+    if (progression.step >= data[progression.route].step.length - 1) {
+        getChoices();
+    }
+    
 }
 
-
-function next(route){
-    storyUI.message.innerHTML="";
-    storyUI.choiceSection.innerHTML="";
-    for (var i = 0; i < data[route].message.length; i++) {
-        var newP=document.createElement('p');
-        newP.textContent=data[route].message[i];
-        storyUI.message.appendChild(newP);
-    }
-    for (let i = 0; i < data[route].choice.length; i++) {
+function getChoices() {
+    for (let i = 0; i < data[progression.route].choice.length; i++) {
         var newBtn = document.createElement('button');
-        newBtn.textContent = data[route].choice[i];
-        newBtn.addEventListener('click', function(){
-            next(data[route].route[i]);
+        newBtn.textContent = data[progression.route].choice[i].answer;
+        newBtn.addEventListener('click', function() {
+            chosenRoute(data[progression.route].choice[i].route);
         })
-        storyUI.choiceSection.appendChild(newBtn);
+        storyUi.choiceSection.appendChild(newBtn);
     }
 }
 
-ui.startBtn.addEventListener('click', function(){
-    next('Intro');
+function chosenRoute(route) {
+    progression.step = 0
+    progression.route = route;
+    storyUi.message.innerHTML = "";
+    storyUi.choiceSection.innerHTML = "";
+    var newP = document.createElement('p');
+    newP.textContent = data[progression.route].step[progression.step].message;
+    storyUi.message.appendChild(newP);
+    if(data[progression.route].step[progression.step].picture){
+        storyUi.picture.src= imgFolder + data[progression.route].step[progression.step].picture;
+    }
+}
+
+
+ui.startBtn.addEventListener('click', function() {
+    chosenRoute("Intro")
 })
 
-ajaxRequest();
+storyUi.message.addEventListener('click', function() {
+    next();
+})
+
+aaaaaajax();
