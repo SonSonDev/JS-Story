@@ -13,15 +13,21 @@
 
 <body>
 
-    <button style="position: fixed; top:0; left:0;" class="startBtn">Start</button>
+    <div class="home">
+        <p class="home_playButton">Play</p>
+        <h1 class="home_title">The story of Qiqi the tanuki</h1>
+    </div>
+
     <div class="game">
         <img class="gameImg" src="img/intro1.jpg" alt="img">
         <div class="choiceSection"></div>
     </div>
-    <div class="messageBox"></div>
+    <div class="messageBox clickable">
+        <p>Démarrer l'histoire.</p>
+        <img src="img/messageboxI.png" alt="messageboxI">
+    </div>
+    <audio class="gameMusic" src="" loop></audio>
     <script type="text/javascript" src="scripts/script.js"></script>
+
 </body>
-
-
-
 </html>

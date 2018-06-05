@@ -1,13 +1,15 @@
 @font-face {
-    src: url("../fonts/Roboto-Regular.ttf");
-    font-family: "Roboto";
+    src: url("../fonts/IndieFlower.ttf");
+    font-family: "IndieFlower";
+}
+@font-face {
+    src: url("../fonts/PoorStory-Regular.ttf");
+    font-family: "PoorStory";
 }
 
 body {
-
     user-select: none;
-    background: rgb(0, 0, 0);
-
+    overflow: hidden;
 }
 
 .game {
@@ -20,6 +22,8 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .gameImg {
@@ -27,7 +31,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
 
 .messageBox {
@@ -38,14 +41,40 @@ body {
     border: 1px solid black;
     border-radius: 5px;
     box-sizing: border-box;
-    padding: 40px 100px;
+    padding: 30px 80px;
+    position: relative;
+}
+
+.messageBox.clickable{
+    cursor: pointer;
+
 }
 
 .messageBox p {
-    font-family: "Roboto";
+    font-family: "IndieFlower";
     margin-bottom: 10px;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 30px;
+    line-height: 45px;
+    
+}
+
+.messageBox img {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    -webkit-animation: move 1s infinite;
+}
+
+@-webkit-keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .choiceSection {
@@ -53,21 +82,72 @@ body {
     flex-direction: column;
     position: absolute;
     z-index: 3;
-
 }
 
 .choiceSection button {
-    font-family: "Roboto";
+    font-family: "IndieFlower";
     font-size: 30px;
     margin-bottom: 20px;
-    background-color: white;
-    border: 1px solid black;
+    background: rgba(255, 255, 255, 0.6);
+    border: 3px groove rgba(0, 0, 0, 0.6);
     border-radius: 5px;
     padding: 20px;
     transition: all 0.2s linear;
+    cursor: pointer;
 }
 
 .choiceSection button:hover {
     background-color: black;
+    border: 3px groove black;
+    
     color: white;
+}
+
+.home {
+    position: fixed;
+    left:0;
+    top:0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: top 0.5s linear;
+}
+
+.home.hidden {
+    top:-100%;
+}
+
+.home_playButton {
+    font-family: "PoorStory";
+    font-size: 280px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.home_playButton:hover {
+    -webkit-animation: shake 0.05s infinite;
+}
+
+@-webkit-keyframes shake {
+    0% {
+        transform: rotate(-1deg);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+
+
+.home_title {
+    font-family: "PoorStory";
+    font-size: 50px;
+    
 }
