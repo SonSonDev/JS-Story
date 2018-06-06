@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="1344 752.508 68.609 71.49">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #030104;
+      }
+
+      .cls-2 {
+        fill: #f2f2f2;
+      }
+    </style>
+  </defs>
+  <g id="Symbole_1_1" data-name="Symbole 1 – 1" transform="translate(-397 684)">
+    <g id="icon" transform="translate(1739.833 70)">
+      <path id="Tracé_1" data-name="Tracé 1" class="cls-1" d="M55.944.256l-29.1,8.9a9.135,9.135,0,0,0-6.383,8.209v30.7s-2.109-1.422-6.8-.757c-6.9.98-12.489,6.273-12.489,11.826s5.592,8.955,12.489,7.976S25.616,61,25.616,55.448V29.239c0-2.462,2.96-3.518,2.96-3.518L54.3,17.657s2.847-.956,2.847,1.679V40.387s-2.622-1.509-7.318-.938c-6.9.836-12.489,6.019-12.489,11.569s5.592,9.071,12.489,8.232,12.494-6.017,12.494-11.572V4.819C62.328,1.294,59.467-.749,55.944.256Z"/>
+    </g>
+    <rect id="Rectangle_12" data-name="Rectangle 12" class="cls-2" width="8" height="84" rx="4" transform="translate(1749.487 73.65) rotate(-40)"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" class="cls-1" width="8" height="84" rx="4" transform="translate(1747.487 75.65) rotate(-40)"/>
+  </g>
+</svg>
