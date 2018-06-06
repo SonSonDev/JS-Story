@@ -1,85 +1,187 @@
 {
     "Intro": {
         "step": [{
-                "message": "Il était une fois, un loup qui avait faim. Il ne voulait pas manger du lapin, il voulait quelque chose de nouveau. Il décida alors de sortir de la forêt."
+                "text": "Qiqi le tanuki",
+                "picture": "intro1.jpg",
+                "music": {  
+                    "function": "pause"
+                }
             },
             {
-                "message": "Il rencontra un berger et son mouton."
+                "text": "Il était une fois, un tanuki qui s'appelle Qiqi qui vivait dans la forêt. Il était seul...",
+                "music": {
+                    "src": "intro.mp3"
+                }
             },
             {
-                "message": "Que fait le loup?"
+                "text": "Qiqi n'avait ni maison, ni famille. Il l'avait perdu si jeune qu'il ne s'en souvenait pas."
+            },
+            {
+                "text": "Il décida de trouver un lieu où s'installer et essayer de devenir ami avec ses nouveaux voisins.",
+                "picture": "intro2.jpg"
+            },
+            {
+                "text": "Cependant, ses nouveaux voisins n'était pas très contents."
+            },
+            {
+                "text": " Ils ne le connaissaient pas Qiqi et se demandaient pourquoi il était venu s'installer ici si soudainement.",
+                "picture": "intro3.jpg"
+            },
+            {
+                "text": "Qiqi le tanuki n'arrivait pas à s'intégrer..."
+            },
+            {
+                "text": "Puis, un jour, les animaux eurent une mauvaise surprise..."
+            },
+            {
+                "text": "Une meute de loups était venue pour les manger.",
+                "picture": "intro4.jpg",
+                "music": {
+                    "src": "wolf.mp3"
+                }
+            },
+            {
+                "text": "C'était la panique, les animaux tentaient de fuir et Qiqi, à l'abri, voulait les aider, mais ne savait pas quoi faire."
+            },
+            {
+                "text": "Qiqi le tanuki avait en revanche un pouvoir très spécial. Il pouvait se changer en ce qu'il souhaitait."
+            },
+            {
+                "text": "Que fait Qiqi le tanuki ?"
             }
         ],
         "choice": [{
-                "answer": "Il attaque le berger",
+                "answer": "Il se transforme en loup.",
                 "route": "A"
             },
             {
-                "answer": "Il attaque le mouton",
-                "route": "B"
+                "answer": "Il se transforme en oiseau.",
+                "route": "F1"
             },
             {
-                "answer": "Il mange son pied",
-                "route": "C"
+                "answer": "Il ne se transforme pas.",
+                "route": "Good End"
             }
         ]
     },
     "A": {
         "step": [{
-                "message": "Le loup mangea le berger."
+                "text": "Qiqi le tanuki décida de se transformer en loup.",
+                "picture": "A1.jpg"
             },
             {
-                "message": "Les moutons pourchassèrent le loup."
+                "text": "Il s'attaqua alors aux loups qui ne comprenaient pas ce qu'il se passait."
             },
             {
-                "message": "Où va-t-il?"
+                "text": "Les loups, stupéfaits d'être attaqués par un de leurs semblables pendant leur chasse, décidèrent de battre en retraite."
+            },
+            {
+                "text": "Qiqi était ainsi parvenu à sauver plusieurs de ses voisins.",
+                "music": {
+                    "function": "pause"
+                }
+            },
+            {
+                "text": "Qiqi pensait enfin pouvoir être accepté par ses voisins."
+            },
+            {
+                "text": "Mais ce qu'ils avaient retenus, c'était surtout que Qiqi avait pris l'apparence d'un loup.",
+                "picture": "A2.jpg",
+                "music": {
+                    "src": "A.mp3"
+                }
+            },
+            {
+                "text": "Ils décidèrent de chasser Qiqi le tanuki."
+            },
+            {
+                "text": "Qiqi le tanuki ne savait pas où aller. Il avança dans la forêt à la recherche d'un nouvel abri."
+            },
+            {
+                "text": "Il finit par sortir de la forêt et se retrouva devant une ferme dans laquelle se trouvait un groupe de poules.",
+                "picture": "A3.jpg",
+                "music": {
+                    "src": "A2.mp3"
+                }
+            },
+            {
+                "text": "Qiqi était affamé. Que fait Qiqi le tanuki ?"
             }
         ],
         "choice": [{
-                "answer": "Dans la forêt",
-                "route": "A1"
+                "answer": "Il se transforme en loup.",
+                "route": "F2"
             },
             {
-                "answer": "Dans le village",
-                "route": "A2"
+                "answer": "Il se transforme en coq.",
+                "route": "F3"
             },
             {
-                "answer": "Dans la montagne",
-                "route": "A3"
+                "answer": "Il ne se transforme pas.",
+                "route": "A+"
             }
         ]
     },
-    "B": {
+    "A+": {
         "step": [{
-                "message": "Le loup se jeta sur le mouton, il le mordit à la gorge et le fit saigner à mort. Avant de se régaler, il regarda le berger."
+                "text": "Une poule paniquée l'aperçut et lui sauta dessus pour lui demander de l'aide. Elle avait perdu ses petits dans la forêt.",
+                "picture": "A+1.jpg"
             },
             {
-                "message": "Le berger s'enfuit. Certainement pour sauver sa vie, mais sans doute aussi pour appeler de l'aide."
+                "text": "Qiqi le tanuki était tout heureux de voir que quelqu'un avait besoin de son aide. Il accepta avec joie et retourna dans la forêt."
             },
             {
-                "message": "Que fait le loup?"
+                "text": "Mais après quelques heures de recherche, Qiqi le tanuki était fatigué et de plus en plus affamé.",
+                "picture": "A+2.jpg"
+            },
+            {
+                "text": "Soudain, il attendit des hurlements!",
+                "music": {
+                    "src": "wolf.mp3"
+                }
+            },
+            {
+                "text": "C'était les loups! Le même groupe de loups qu'il avait affronter précédemment.",
+                "picture": "A+3.jpg"
+            },
+            {
+                "text": "Ils ont trouvé les poussins avant lui et les pourchassaient."
+            },
+            {
+                "text": "Qiqi le tanuki devait faire quelque chose!"
+            },
+            {
+                "text": "Que fait Qiqi le tanuki ?"
             }
         ],
         "choice": [{
-                "answer": "Il mange le mouton",
-                "route": "B1"
+                "answer": "Il se transforme en loup.",
+                "route": "F4"
             },
             {
-                "answer": "Il pourchasse le berger",
-                "route": "B2"
+                "answer": "Il ne se transforme pas.",
+                "route": "F5"
             }
         ]
     },
-
-    "B1": {
+    "Good End": {
         "step": [{
-                "message": "Après s'être régalé de la chair du mouton, des habitants du plus proche village arrivèrent pour tuer le loup."
+                "text": "Qiqi le tanuki décida de ne pas se transformer. Il sortit de sa cachette pour aider ses voisins.",
+                "music": {
+                    "src": "hero.mp3"
+                }
             },
             {
-                "message": "Le loup était encerclé. Il est mort"
+                "text": "Mais il était évident que Qiqi le tanuki était trop faible pour vaincre tous ces loups."
             },
             {
-                "message": "Fin."
+                "text": "Guidés par le courage de Qiqi le tanuki, tous les animaux se retournèrent pour se battre."
+            },
+            {
+                "text": "Submergés par leur combativité, les loups décidèrent de battre en retraite."
+            },
+            {
+                "text": "C'est ainsi que Qiqi le tanuki devint un héros adoré par tous ses voisins. Fin."
             }
         ],
         "choice": [{
@@ -87,13 +189,21 @@
             "route": "Intro"
         }]
     },
-
-    "B2": {
+    "F1": {
         "step": [{
-                "message": "Le loup mangea le berger."
+                "text": "Le tanuki se changea en oiseau. Il voulait aider les autres animaux."
             },
             {
-                "message": "Fin."
+                "text": "Il voulait attirer l'attention des loups. Malheureusement, le tanuki n'avait jamais voler auparavant."
+            },
+            {
+                "text": "Il s'écrasa sur le sol et ne pouvait plus bouger."
+            },
+            {
+                "text": "Un loup en profita pour le manger."
+            },
+            {
+                "text": "Grâce à l'acte de Qiqi l'oiseau, certains animaux réussirent à s'enfuir et à survivre. Fin."
             }
         ],
         "choice": [{
@@ -101,13 +211,23 @@
             "route": "Intro"
         }]
     },
-
-    "A1": {
+    "F2": {
         "step": [{
-                "message": "Le loup pu se cacher dans la forêt."
+                "text": "Qiqi le tanuki décida de se transformer en loup...",
+                "picture": "F2-1.jpg",
+                "music": {
+                    "src": "madqiqi.mp3"
+                }
             },
             {
-                "message": "Fin."
+                "text": "Guidé par son estomac, il se mit à dévorer tous les poulets qui croisait son regard."
+            },
+            {
+                "text": "Mais rapidement, le propriétaire des lieux débarqua un fusil à la main et mit fin à la folie de Qiqi.",
+                "picture": "F2-2.jpg"
+            },
+            {
+                "text": "C'est ainsi que mourru Qiqi le loup... Fin."
             }
         ],
         "choice": [{
@@ -115,31 +235,23 @@
             "route": "Intro"
         }]
     },
-
-    "A2": {
+    "F3": {
         "step": [{
-                "message": "Le loup arrive devant une maison."
+                "text": "Qiqi décida de se transformer en coq pour s'intégrer à la communauté.",
+                "picture": "F3-1.jpg",
+                "music": {
+                    "src": "chicken.mp3"
+                }
             },
             {
-                "message": "Que fait-il?"
-            }
-        ],
-        "choice": [{
-                "answer": "Il se cache dedans",
-                "route": "A2-1"
+                "text": "Soudain, un autre coq apparu pour le défier. Le gagnant aura le droit de manger en premier."
             },
             {
-                "answer": "Il se retourne vers les moutons et se bat jusqu'à la mort",
-                "route": "A2-2"
-            }
-        ]
-    },
-    "A2-1": {
-        "step": [{
-                "message": "Les moutons rentrent dans la maison et le mangent."
+                "text": "Qiqi, affamé, se battit de toute ses forces et grâce à la force de la faim remporta le combat.",
+                "picture": "F3-2.jpg"
             },
             {
-                "message": "Fin."
+                "text": "Et Qiqi le coq devint le roi de la ferme. Fin."
             }
         ],
         "choice": [{
@@ -147,15 +259,24 @@
             "route": "Intro"
         }]
     },
-    "A2-2": {
+    "F4": {
         "step": [{
-                "message": "Le loup trouve en lui une force cachée et se déchaine."
+                "text": "Qiqi décida de se transformer en loup.",
+                "music": {
+                    "src": "madqiqi.mp3"
+                }
             },
             {
-                "message": "Il mangea les moutons."
+                "text": "Mais il était affamé, il ne pensait plus qu'à manger."
             },
             {
-                "message": "Fin."
+                "text": "Il aida les loups à coincer les poussins et il partagèrent le festin."
+            },
+            {
+                "text": "Après le repas, les loups acceptèrent Qiqi au sein de la meute."
+            },
+            {
+                "text": "Ainsi, Qiqi le loup avait trouvé une nouvelle famille. Fin."
             }
         ],
         "choice": [{
@@ -163,26 +284,21 @@
             "route": "Intro"
         }]
     },
-
-    "A3": {
+    "F5": {
         "step": [{
-                "message": "Les moutons coincèrent le loup dans une grotte et le mangèrent."
+                "text": "Qiqi décida de ne pas se transformer."
             },
             {
-                "message": "Fin."
-            }
-        ],
-        "choice": [{
-            "answer": "Recommencer?",
-            "route": "Intro"
-        }]
-    },
-    "C": {
-        "step": [{
-                "message": "Haha"
+                "text": "Qiqi prit son courage à 2 pattes et se mit en travers du chemin des loups."
             },
             {
-                "message": "Fin."
+                "text": "Malheureusement, il était évident que Qiqi le tanuki ne faisait pas le poids."
+            },
+            {
+                "text": "Les loups le tuèrent et le mangèrent."
+            },
+            {
+                "text": " Mais grâce à son courage, les poussins réussirent à s'échapper et purent compter la bravoure de Qiqi le tanuki. Fin."
             }
         ],
         "choice": [{

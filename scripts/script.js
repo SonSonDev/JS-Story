@@ -1,35 +1,30 @@
-var imgFolder = "./img/";
+var imgFolder = "./img/story/";
 var musicFolder = "./music/";
 var data;
 
 
 //requete ajax
 function ajaxRequest(){
-    fetch("./scripts/story2.json")
+    fetch("./scripts/story.json")
     .then(function(res){
-        return res.json()
+        return res.json();
     }).then(function(story){
-        data = story
+        data = story;
     })
-
 }
 
-//ecran d'accueil
+//élément de l'écran d'accueil
 var home = {
     screen: document.querySelector(".home"),
     button: document.querySelector(".home_playButton")
 }
 
-home.button.addEventListener('click', function(){
-    home.screen.classList.add('hidden');
-})
-
-
 //element du DOM à modifier
 var storyUi = {
-    music: document.querySelector(".gameMusic"),
-    picture: document.querySelector(".gameImg"),
-    message: document.querySelector(".messageBox"),
+    audioIcon: document.querySelector(".audioIcon"),
+    music: document.querySelector(".storyMusic"),
+    picture: document.querySelector(".storyImg"),
+    text: document.querySelector(".textBox"),
     choiceSection: document.querySelector(".choiceSection"),
 };
 
@@ -41,50 +36,46 @@ var progression = {
 
 //fonction executée lorsqu'une réponse est choisie. Permet de choisir une route
 function chosenRoute(route) {
-    progression.step = 0
+    progression.step = 0;
     progression.route = route;
-    storyUi.message.innerHTML = "";
-    storyUi.choiceSection.innerHTML = "";
-    var newP = document.createElement('p');
-    newP.textContent = data[progression.route].step[progression.step].message;
-    storyUi.message.appendChild(newP);
-    storyUi.message.innerHTML += '<img src="img/messageboxI.png" alt="messageboxI">';
-    storyUi.message.classList.add('clickable')
+
+    showText();
+    musicAndPicture();
+
+    storyUi.text.innerHTML += '<img src="img/other/textboxI.png" alt="textboxI">';
+    storyUi.text.classList.add('clickable');
+
     if(data[progression.route].step[progression.step].picture){
         storyUi.picture.src= imgFolder + data[progression.route].step[progression.step].picture;
-        
     }
-    
-    musicAndPicture();
 }
 
 //fonction qui permet d'avancer dans le récit
 function next() {
-    if (progression.step >= data[progression.route].step.length - 1) {
-        return;
-    }
-    progression.step++;
-    storyUi.message.innerHTML = "";
-    storyUi.choiceSection.innerHTML = "";
-    var newP = document.createElement('p');
-    newP.textContent = data[progression.route].step[progression.step].message;
-    storyUi.message.appendChild(newP);
-
-    if(data[progression.route].step[progression.step].picture){
-        storyUi.picture.src= imgFolder + data[progression.route].step[progression.step].picture;
-    }
-    musicAndPicture();
-    if (progression.step >= data[progression.route].step.length - 1) {
-        getChoices();
-        storyUi.message.classList.remove('clickable')
-        
-    } else {
-        storyUi.message.innerHTML += '<img src="img/messageboxI.png" alt="messageboxI">';
-        
-    }
     
+    if (progression.step >= data[progression.route].step.length - 1) {
+        showText();        
+        getChoices();
+        storyUi.text.classList.remove('clickable');
+    } 
+    if(progression.step < data[progression.route].step.length - 1) {
+        progression.step++;
+        showText();
+        storyUi.text.innerHTML += '<img src="img/other/textboxI.png" alt="textboxI">';   
+        musicAndPicture();
+    }
 }
 
+//fonction qui affiche le texte
+function showText(){
+    storyUi.text.innerHTML = "";
+    storyUi.choiceSection.innerHTML = "";
+    var newP = document.createElement('p');
+    newP.textContent = data[progression.route].step[progression.step].text;
+    storyUi.text.appendChild(newP);
+}
+
+//fonction qui affiche les réponses aux questions
 function getChoices() {
     for (let i = 0; i < data[progression.route].choice.length; i++) {
         var newBtn = document.createElement('button');
@@ -96,24 +87,42 @@ function getChoices() {
     }
 }
 
+//fonction qui change la musique et l'image
 function musicAndPicture(){
     if(data[progression.route].step[progression.step].picture){
         storyUi.picture.src= imgFolder + data[progression.route].step[progression.step].picture;
     }
+
     if(data[progression.route].step[progression.step].music){
-       
-        if(data[progression.route].step[progression.step].music.function==="play"){
-            storyUi.music.src= musicFolder + data[progression.route].step[progression.step].music.src;
-            storyUi.music.play();
-        } else if(data[progression.route].step[progression.step].music.function==="pause"){
+        if(data[progression.route].step[progression.step].music.function==="pause"){
             storyUi.music.pause();
             storyUi.music.currentTime=0;
+        } else {
+            storyUi.music.src= musicFolder + data[progression.route].step[progression.step].music.src;
+            storyUi.music.play();
         }
     }
 }
 
-storyUi.message.addEventListener('click', function() {
+//lorsqu'on clique sur le play de l'écran d'accueil
+home.button.addEventListener('click', function(){
+    home.screen.classList.add('hidden');
+})
+
+//lorsqu'on clique sur la boite de texte, on avance dans le récit
+storyUi.text.addEventListener('click', function() {
     next();
+})
+
+//fonction mute
+storyUi.audioIcon.addEventListener('click', function(){
+    if(storyUi.music.muted===false){
+        storyUi.music.muted=true;
+        this.src="./img/other/mute.svg"
+    } else if (storyUi.music.muted===true){
+        storyUi.music.muted=false;
+        this.src="./img/other/musicnote.svg" 
+    }  
 })
 
 

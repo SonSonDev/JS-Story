@@ -1,0 +1,75 @@
+
+/* HOME */
+.home {
+    position: fixed;
+    left:0;
+    top:0;
+    height: 100vh;
+    width: 100vw;
+    background: #F3F2F1;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s linear;
+}
+
+.home.hidden {
+    transform: translateY(-100vh);
+}
+
+.home_playButton {
+    font-family: "PoorStory";
+    font-size: 280px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color:#3A3A3A;
+    transition: opacity 0.2s ease;    
+}
+
+.home_playButton:hover {
+    -webkit-animation: shake 0.05s infinite;
+}
+
+@-webkit-keyframes shake {
+    0% {
+        transform: rotate(-1deg);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+
+.home.hidden .home_playButton {
+    opacity: 0;
+}
+
+.home_title {
+    font-family: "PoorStory";
+    font-size: 50px;
+    transition: opacity 0.2s ease;    
+}
+
+.home.hidden .home_title {
+    opacity: 0;
+}
+
+.bgDotsHome {
+    background-image: url("../img/other/dots_bg.png");
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.home.hidden .bgDotsHome {
+    opacity: 0;
+}

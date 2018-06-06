@@ -4,29 +4,49 @@
 <head>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/game.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="" />
+    <link rel="icon" type="image/png" href="img/other/leaf.png" />
 
     <title>Qiqi le tanuki</title>
 </head>
 
 <body>
 
-    <div class="home">
+    <section class="home">
+        <div class="bgDotsHome"></div>
         <p class="home_playButton">Play</p>
-        <h1 class="home_title">The story of Qiqi the tanuki</h1>
-    </div>
+        <h1 class="home_title">L'histoire de Qiqi le tanuki</h1>
+    </section>
 
-    <div class="game">
-        <img class="gameImg" src="img/intro1.jpg" alt="img">
-        <div class="choiceSection"></div>
-    </div>
-    <div class="messageBox clickable">
-        <p>Démarrer l'histoire.</p>
-        <img src="img/messageboxI.png" alt="messageboxI">
-    </div>
-    <audio class="gameMusic" src="" loop></audio>
+    <section class="game">
+        <div class="storyContainer">
+            <div class="story">
+                <img class="storyImg" src="img/story/intro1.jpg" alt="img">
+                <div class="choiceSection"></div>
+            </div>
+        </div>
+        <div class="sticks"></div>
+        <div class="textBox clickable">
+            <p>Qiqi le tanuki.</p>
+            <img src="img/other/textboxI.png" alt="textboxI">
+        </div>
+        
+        
+        <img class="leaf leafR" src="img/other/leafLeft.png" alt="leaf">
+        <img class="leaf leafL" src="img/other/leafRight.png" alt="leaf">
+        
+    </section>
+    <img class="audioIcon" src="img/other/musicnote.svg"></img>
+
+    <div class="bgDots1"></div>
+    <div class="bgDots2"></div>
+    
+    
+    <audio class="storyMusic" src="" loop></audio>
+
     <script type="text/javascript" src="scripts/script.js"></script>
 
 </body>
