@@ -2,17 +2,6 @@ var imgFolder = "./img/story/";
 var musicFolder = "./music/";
 var data;
 
-
-//requete ajax
-function ajaxRequest(){
-    fetch("./scripts/story.json")
-    .then(function(res){
-        return res.json();
-    }).then(function(story){
-        data = story;
-    })
-}
-
 //élément de l'écran d'accueil
 var home = {
     screen: document.querySelector(".home"),
@@ -34,6 +23,16 @@ var progression = {
     step: 0
 };
 
+//requete ajax pour stoccker le json dans la variable data
+function ajaxRequest(){
+    fetch("./scripts/story.json")
+    .then(function(res){
+        return res.json();
+    }).then(function(story){
+        data = story;
+    })
+}
+
 //fonction executée lorsqu'une réponse est choisie. Permet de choisir une route
 function chosenRoute(route) {
     progression.step = 0;
@@ -44,10 +43,6 @@ function chosenRoute(route) {
 
     storyUi.text.innerHTML += '<img src="img/other/textboxI.png" alt="textboxI">';
     storyUi.text.classList.add('clickable');
-
-    if(data[progression.route].step[progression.step].picture){
-        storyUi.picture.src= imgFolder + data[progression.route].step[progression.step].picture;
-    }
 }
 
 //fonction qui permet d'avancer dans le récit
@@ -126,5 +121,5 @@ storyUi.audioIcon.addEventListener('click', function(){
     }  
 })
 
-
+//lance la requête ajax
 ajaxRequest();

@@ -180,7 +180,10 @@
             },
             {
                 "text": "C'est ainsi que Qiqi le tanuki devint un héros adoré par tous ses voisins. Fin.",
-                "picture": "GE-2.jpg"
+                "picture": "GE-2.jpg",
+                "music": {
+                    "src": "victory.mp3"
+                }
             }
         ],
         "choice": [{
@@ -275,7 +278,10 @@
             },
             {
                 "text": "Au cours du repas, Qiqi se lia d'amitié avec les autres loups qui l'acceptèrent au sein de la meute.",
-                "picture": "F4-2.jpg"
+                "picture": "F4-2.jpg",
+                "music": {
+                    "src": "A.mp3"
+                }
             },
             {
                 "text": "Ainsi, Qiqi le loup avait trouvé une nouvelle famille. Fin."
