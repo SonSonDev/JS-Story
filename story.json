@@ -2,7 +2,7 @@
     "Intro": {
         "step": [{
                 "text": "Qiqi le tanuki",
-                "picture": "intro1.jpg",
+                "picture": "Intro1.jpg",
                 "music": {
                     "src": "intro.mp3"
                 }
@@ -15,14 +15,14 @@
             },
             {
                 "text": "Il décida de trouver un lieu où s'installer et essayer de devenir ami avec ses nouveaux voisins.",
-                "picture": "intro2.jpg"
+                "picture": "Intro2.jpg"
             },
             {
                 "text": "Cependant, ses nouveaux voisins n'était pas très contents."
             },
             {
                 "text": " Ils ne connaissaient pas Qiqi et se demandaient pourquoi il était venu s'installer ici si soudainement.",
-                "picture": "intro3.jpg"
+                "picture": "Intro3.jpg"
             },
             {
                 "text": "Qiqi le tanuki n'arrivait pas à s'intégrer..."
@@ -32,7 +32,7 @@
             },
             {
                 "text": "Une meute de loups était venue pour les manger.",
-                "picture": "intro4.jpg",
+                "picture": "Intro4.jpg",
                 "music": {
                     "src": "wolf.mp3"
                 }
