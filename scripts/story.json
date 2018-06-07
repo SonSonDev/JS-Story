@@ -3,15 +3,12 @@
         "step": [{
                 "text": "Qiqi le tanuki",
                 "picture": "intro1.jpg",
-                "music": {  
-                    "function": "pause"
-                }
-            },
-            {
-                "text": "Il était une fois, un tanuki qui s'appelle Qiqi qui vivait dans la forêt. Il était seul...",
                 "music": {
                     "src": "intro.mp3"
                 }
+            },
+            {
+                "text": "Il était une fois, un tanuki qui s'appelle Qiqi qui vivait dans la forêt. Il était seul..."
             },
             {
                 "text": "Qiqi n'avait ni maison, ni famille. Il l'avait perdu si jeune qu'il ne s'en souvenait pas."
@@ -24,7 +21,7 @@
                 "text": "Cependant, ses nouveaux voisins n'était pas très contents."
             },
             {
-                "text": " Ils ne le connaissaient pas Qiqi et se demandaient pourquoi il était venu s'installer ici si soudainement.",
+                "text": " Ils ne connaissaient pas Qiqi et se demandaient pourquoi il était venu s'installer ici si soudainement.",
                 "picture": "intro3.jpg"
             },
             {
@@ -167,6 +164,7 @@
     "Good End": {
         "step": [{
                 "text": "Qiqi le tanuki décida de ne pas se transformer. Il sortit de sa cachette pour aider ses voisins.",
+                "picture": "GE-1.jpg",
                 "music": {
                     "src": "hero.mp3"
                 }
@@ -181,7 +179,8 @@
                 "text": "Submergés par leur combativité, les loups décidèrent de battre en retraite."
             },
             {
-                "text": "C'est ainsi que Qiqi le tanuki devint un héros adoré par tous ses voisins. Fin."
+                "text": "C'est ainsi que Qiqi le tanuki devint un héros adoré par tous ses voisins. Fin.",
+                "picture": "GE-2.jpg"
             }
         ],
         "choice": [{
@@ -191,7 +190,8 @@
     },
     "F1": {
         "step": [{
-                "text": "Le tanuki se changea en oiseau. Il voulait aider les autres animaux."
+                "text": "Le tanuki se changea en oiseau. Il voulait aider les autres animaux.",
+                "picture": "F1-1.jpg"
             },
             {
                 "text": "Il voulait attirer l'attention des loups. Malheureusement, le tanuki n'avait jamais voler auparavant."
@@ -264,16 +264,18 @@
                 "text": "Qiqi décida de se transformer en loup.",
                 "music": {
                     "src": "madqiqi.mp3"
-                }
+                },
+                "picture": "F4-1.jpg"
             },
             {
                 "text": "Mais il était affamé, il ne pensait plus qu'à manger."
             },
             {
-                "text": "Il aida les loups à coincer les poussins et il partagèrent le festin."
+                "text": "Il aida les loups à coincer les poussins et il partagèrent le repas."
             },
             {
-                "text": "Après le repas, les loups acceptèrent Qiqi au sein de la meute."
+                "text": "Au cours du repas, Qiqi se lia d'amitié avec les autres loups qui l'acceptèrent au sein de la meute.",
+                "picture": "F4-2.jpg"
             },
             {
                 "text": "Ainsi, Qiqi le loup avait trouvé une nouvelle famille. Fin."
@@ -286,7 +288,8 @@
     },
     "F5": {
         "step": [{
-                "text": "Qiqi décida de ne pas se transformer."
+                "text": "Qiqi décida de ne pas se transformer.",
+                "picture": "F5-1.jpg"
             },
             {
                 "text": "Qiqi prit son courage à 2 pattes et se mit en travers du chemin des loups."
@@ -298,7 +301,8 @@
                 "text": "Les loups le tuèrent et le mangèrent."
             },
             {
-                "text": " Mais grâce à son courage, les poussins réussirent à s'échapper et purent compter la bravoure de Qiqi le tanuki. Fin."
+                "text": " Mais grâce à son courage, les poussins réussirent à s'échapper et purent compter la bravoure de Qiqi le tanuki. Fin.",
+                "picture": "F5-2.jpg"
             }
         ],
         "choice": [{
