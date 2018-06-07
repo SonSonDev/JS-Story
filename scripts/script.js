@@ -23,9 +23,9 @@ var progression = {
     step: 0
 };
 
-//requete ajax pour stoccker le json dans la variable data
+//requete ajax pour stocker le json dans la variable data
 function ajaxRequest(){
-    fetch("./scripts/story.json")
+    fetch("./story.json")
     .then(function(res){
         return res.json();
     }).then(function(story){
