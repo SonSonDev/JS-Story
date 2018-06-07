@@ -51,6 +51,7 @@
 .home_title {
     font-family: "PoorStory";
     font-size: 50px;
+    color:#b8854c;
     transition: opacity 0.2s ease;    
 }
 

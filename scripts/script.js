@@ -107,6 +107,7 @@ function musicAndPicture(){
 //lorsqu'on clique sur le play de l'écran d'accueil
 home.button.addEventListener('click', function(){
     home.screen.classList.add('hidden');
+    storyUi.music.play();    
 })
 
 //lorsqu'on clique sur la boite de texte, on avance dans le récit
