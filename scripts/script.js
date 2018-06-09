@@ -128,43 +128,37 @@ ajaxRequest();
 
 //loading
 
-loading = {
-    screen: document.querySelector('.loading')
-}
+loading = document.querySelector('.loading')
 
 function loadAssets() {
     var count = 0
     for (const key in data) {
-        const element = data[key].step;
-        console.log(element);
-        element.forEach(step => {
-            if (step.music && step.music.src) {
+        const step = data[key].step;
+        step.forEach(element => {
+            if (element.music && element.music.src) {
                 var preloadLink = document.createElement("link");
-                preloadLink.href = musicFolder + step.music.src;
+                preloadLink.href = musicFolder + element.music.src;
                 preloadLink.rel = "preload";
                 preloadLink.as = "audio";
                 document.head.appendChild(preloadLink);
             }
-            if (step.picture) {
+            if (element.picture) {
                 var preloadLink = document.createElement("link");
-                preloadLink.href = imgFolder + step.picture;
+                preloadLink.href = imgFolder + element.picture;
                 preloadLink.rel = "preload";
                 preloadLink.as = "image";
                 document.head.appendChild(preloadLink);
             }
-            console.log("a");
         })
         count++;
         if (count === Object.keys(data).length) {
             window.addEventListener("load", function (event) {
-                loading.screen.classList.add("hidden")
+                loading.classList.add("hidden")
             })
         }
     }
-
 }
 
-loading.screen.addEventListener('transitionend', function () {
+loading.addEventListener('transitionend', function () {
     this.remove()
-
 })

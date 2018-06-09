@@ -1,6 +1,3 @@
-
-
-
 /* HOME */
 .home {
     position: fixed;
@@ -14,7 +11,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all 0.5s linear;
+    transition: translateY 0.5s linear;
 }
 
 .home.hidden {
@@ -75,4 +72,31 @@
 
 .home.hidden .bgDotsHome {
     opacity: 0;
+}
+
+.loading {
+    font-family: "PoorStory";
+    font-size: 30px;
+    -webkit-animation: blink 1s infinite;
+    transition: opacity 1s ease;
+    position: absolute;
+    bottom:50px;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.loading.hidden {
+    opacity: 0;
+}
+
+@keyframes blink {
+    0% {
+        color:rgba(0,0,0,1);
+    }
+    50% {
+        color:rgba(0,0,0,0);
+    }
+    100% {
+        color:rgba(0,0,0,1);
+    }
 }
