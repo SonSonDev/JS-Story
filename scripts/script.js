@@ -24,13 +24,14 @@ var progression = {
 };
 
 //requete ajax pour stocker le json dans la variable data
-function ajaxRequest(){
+function ajaxRequest() {
     fetch("./story.json")
-    .then(function(res){
-        return res.json();
-    }).then(function(story){
-        data = story;
-    })
+        .then(function (res) {
+            return res.json();
+        }).then(function (story) {
+            data = story;
+            loadAssets()
+        })
 }
 
 //fonction executée lorsqu'une réponse est choisie. Permet de choisir une route
@@ -47,22 +48,22 @@ function chosenRoute(route) {
 
 //fonction qui permet d'avancer dans le récit
 function next() {
-    
+
     if (progression.step >= data[progression.route].step.length - 1) {
-        showText();        
+        showText();
         getChoices();
         storyUi.text.classList.remove('clickable');
-    } 
-    if(progression.step < data[progression.route].step.length - 1) {
+    }
+    if (progression.step < data[progression.route].step.length - 1) {
         progression.step++;
         showText();
-        storyUi.text.innerHTML += '<img src="img/other/textboxI.png" alt="textboxI">';   
+        storyUi.text.innerHTML += '<img src="img/other/textboxI.png" alt="textboxI">';
         musicAndPicture();
     }
 }
 
 //fonction qui affiche le texte
-function showText(){
+function showText() {
     storyUi.text.innerHTML = "";
     storyUi.choiceSection.innerHTML = "";
     var newP = document.createElement('p');
@@ -75,7 +76,7 @@ function getChoices() {
     for (let i = 0; i < data[progression.route].choice.length; i++) {
         var newBtn = document.createElement('button');
         newBtn.textContent = data[progression.route].choice[i].answer;
-        newBtn.addEventListener('click', function() {
+        newBtn.addEventListener('click', function () {
             chosenRoute(data[progression.route].choice[i].route);
         })
         storyUi.choiceSection.appendChild(newBtn);
@@ -83,43 +84,87 @@ function getChoices() {
 }
 
 //fonction qui change la musique et l'image
-function musicAndPicture(){
-    if(data[progression.route].step[progression.step].picture){
-        storyUi.picture.src= imgFolder + data[progression.route].step[progression.step].picture;
+function musicAndPicture() {
+    if (data[progression.route].step[progression.step].picture) {
+        storyUi.picture.src = imgFolder + data[progression.route].step[progression.step].picture;
     }
 
-    if(data[progression.route].step[progression.step].music){
-        if(data[progression.route].step[progression.step].music.function==="pause"){
+    if (data[progression.route].step[progression.step].music) {
+        if (data[progression.route].step[progression.step].music.function === "pause") {
             storyUi.music.pause();
-            storyUi.music.currentTime=0;
+            storyUi.music.currentTime = 0;
         } else {
-            storyUi.music.src= musicFolder + data[progression.route].step[progression.step].music.src;
+            storyUi.music.src = musicFolder + data[progression.route].step[progression.step].music.src;
             storyUi.music.play();
         }
     }
 }
 
 //lorsqu'on clique sur le play de l'écran d'accueil
-home.button.addEventListener('click', function(){
+home.button.addEventListener('click', function () {
     home.screen.classList.add('hidden');
-    storyUi.music.play();    
+    storyUi.music.play();
 })
 
 //lorsqu'on clique sur la boite de texte, on avance dans le récit
-storyUi.text.addEventListener('click', function() {
+storyUi.text.addEventListener('click', function () {
     next();
 })
 
 //fonction mute
-storyUi.audioIcon.addEventListener('click', function(){
-    if(storyUi.music.muted===false){
-        storyUi.music.muted=true;
-        this.src="./img/other/mute.svg"
-    } else if (storyUi.music.muted===true){
-        storyUi.music.muted=false;
-        this.src="./img/other/musicnote.svg" 
-    }  
+storyUi.audioIcon.addEventListener('click', function () {
+    if (storyUi.music.muted === false) {
+        storyUi.music.muted = true;
+        this.src = "./img/other/mute.svg"
+    } else if (storyUi.music.muted === true) {
+        storyUi.music.muted = false;
+        this.src = "./img/other/musicnote.svg"
+    }
 })
 
 //lance la requête ajax
 ajaxRequest();
+
+
+//loading
+
+loading = {
+    screen: document.querySelector('.loading')
+}
+
+function loadAssets() {
+    var count = 0
+    for (const key in data) {
+        const element = data[key].step;
+        console.log(element);
+        element.forEach(step => {
+            if (step.music && step.music.src) {
+                var preloadLink = document.createElement("link");
+                preloadLink.href = musicFolder + step.music.src;
+                preloadLink.rel = "preload";
+                preloadLink.as = "audio";
+                document.head.appendChild(preloadLink);
+            }
+            if (step.picture) {
+                var preloadLink = document.createElement("link");
+                preloadLink.href = imgFolder + step.picture;
+                preloadLink.rel = "preload";
+                preloadLink.as = "image";
+                document.head.appendChild(preloadLink);
+            }
+            console.log("a");
+        })
+        count++;
+        if (count === Object.keys(data).length) {
+            window.addEventListener("load", function (event) {
+                loading.screen.classList.add("hidden")
+            })
+        }
+    }
+
+}
+
+loading.screen.addEventListener('transitionend', function () {
+    this.remove()
+
+})
