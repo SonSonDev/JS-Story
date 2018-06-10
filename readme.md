@@ -10,7 +10,7 @@ Qiqi the tanuki wants a home and friends.
 ## Authors
 
 - [ShonhTan](https://github.com/ShonhTan) : Story, drawings, developement
-- [Vlry](http://https://github.com/Vlry) : Story, assets, design
+- [Vlry](https://github.com/Vlry) : Story, assets, design
 
 ## Credits
 
